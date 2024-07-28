@@ -1,6 +1,6 @@
 import { Text } from "react-native"
 
-export default function New(){
+export default function profile(){
     return( 
         <Text> this is tabs index page </Text>
 )
