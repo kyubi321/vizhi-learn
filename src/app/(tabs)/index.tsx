@@ -2,6 +2,7 @@ import { Image, Text, View,FlatList, FlatListComponent } from "react-native";
 import posts from '../../../assets/data/posts.json';
 import {AntDesign,Ionicons,Feather} from '@expo/vector-icons';
 import Postlistitem from "../../components/Postlistitem";
+import { Cloudinary } from "@cloudinary/url-gen";
 
 
 export default function New(){
