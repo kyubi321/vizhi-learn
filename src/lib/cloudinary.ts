@@ -5,3 +5,4 @@ export const cld = new Cloudinary({
         cloudName:process.env.EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME,
     },
 });
+//this is the cloudinary instance 
