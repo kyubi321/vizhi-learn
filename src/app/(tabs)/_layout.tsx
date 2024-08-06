@@ -1,9 +1,16 @@
 import { Tabs } from "expo-router";
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
+import { Redirect } from "expo-router";
+import { useAuth } from "../../providers/AuthProvider";
 
 
 export default function TabsLayout(){ 
+    const {isAuthenticated} = useAuth();
+    if (!isAuthenticated){
+        return <Redirect href="/(auth)"/>;
+    }
+
     return(
         <Tabs screenOptions={{tabBarActiveTintColor:'black',tabBarShowLabel:false}}>
         

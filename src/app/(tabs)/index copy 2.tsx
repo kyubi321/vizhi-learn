@@ -3,6 +3,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { useEffect, useState } from "react";
 import Button from "../../components/Button";
 import { TailwindProvider } from "tailwind-rn";
+import { supabase } from "../../lib/supabase";
 
 
 
@@ -80,7 +81,7 @@ export default function profile(){
             {/* Button */}
                 < View className="  w-full gap-3 mt-auto">
                     <Button title="Update" className="w-full bg-blue-500 p-4 items-center rounded-xl"/>
-                    <Button title="Sign out" className="w-full bg-blue-500 p-4 items-center rounded-xl"/>
+                    <Button title="Sign out" className="w-full bg-blue-500 p-4 items-center rounded-xl" onPress={() => supabase.auth.signOut()}/>
                 </View>
           
             
