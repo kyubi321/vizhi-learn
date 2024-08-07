@@ -32,7 +32,7 @@ export default function GradeSelection() {
         </TouchableOpacity>
         </View>
       ))}
-      <Button2 title='Next' onPress={()=>router.push('../(tabs)')}></Button2>
+      <Button2 title='Next' onPress={()=>router.push('../(vtabs)')}></Button2>
     </View>
   );
 }
