@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Alert, StyleSheet, View, AppState, Button, TextInput,Image } from 'react-native'
 import { supabase } from '../../lib/supabase'
 import Button2 from '../../components/Button2'
+import { createStackNavigator } from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native'
+
 
 
 // Tells Supabase Auth to continuously refresh the session automatically if
@@ -48,7 +51,7 @@ export default function Auth() {
   }
 
   return (
-    <View  className=" mt-32 ">
+    <View  className=" mt-32 " >
       <Image source={require('../../../assets/data/Mainimg.png')} className="w-full aspect-[3/4] self-center "></Image>
       <View className="p-4 mt-20">
         <TextInput className="border border-gray-300 p-2 rounded-lg shadow-lg mb-2"
@@ -92,4 +95,6 @@ const styles = StyleSheet.create({
   mt20: {
     marginTop: 20,
   },
-})
+});
+
+

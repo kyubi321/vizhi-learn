@@ -4,8 +4,8 @@ import { useAuth } from "../../providers/AuthProvider";
 export default function AuthLayout(){
     const {isAuthenticated} = useAuth();
     if (isAuthenticated){
-        return <Redirect href= "/(tabs)" />;
+        return <Redirect href= "/(welcome)"  />;
     }
 
-    return <Stack/>;
+    return <Stack screenOptions={{headerShown:false}}/>;
 }
