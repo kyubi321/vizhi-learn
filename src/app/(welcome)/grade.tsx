@@ -19,9 +19,8 @@ export default function GradeSelection() {
       <Text className="text-4xl font-bold mb-10 ">What's your grade?</Text>
       
       {grades.map((grade, index) => (
-        <View className='mt-2 w-72 '>
+        <View  key={index} className='mt-2 w-72 '>
         <TouchableOpacity
-          key={index}
           className=""
           onPress={() => Alert.alert(`${grade} selected`)}
         >

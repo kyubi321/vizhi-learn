@@ -24,7 +24,7 @@ export default function TabsLayout(){
                 }}/>
             <Tabs.Screen name='select' options={{headerTitle:'Search',headerTitleAlign:'center',
                 tabBarIcon:({color})=>(
-                    <FontAwesome6 name="plus-square" size={26} color={color} />
+                    <FontAwesome6 name="magnifying-glass" size={26} color={color} />
                 )
                 }}/>    
              <Tabs.Screen name='profile' options={{headerTitle:'Profile',headerTitleAlign:'center',

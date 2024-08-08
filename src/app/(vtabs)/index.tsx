@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet, Pressable } from 'react-native';
 import Button3 from '../../components/Button2';
-import { router } from 'expo-router';
+import { useRouter } from 'expo-router';
+
 
 export default function Home(){
+  const router = useRouter();
     return(
         <ScrollView className='bg-white p-2' >
         <View className='p-4'>
@@ -29,35 +31,37 @@ export default function Home(){
   
           {/* Cards Section */}
           <View className=''>
-            <Pressable>
+            <Pressable onPress={()=>router.push('../(comp)/neet')}>
               <Image
                 source={ require('../../../assets/data/Mask group.png')}
                 className='w-full h-32 rounded-3xl mt-7 mb-7'
+      
               />
               </Pressable>
         
   
-            <TouchableOpacity>
+            <Pressable onPress={()=>router.push('../(comp)/keam')}>
               <Image
                 source={require('../../../assets/data/mask.png')}
                 className='w-full h-32 rounded-xl bg-slate-500'
               />
-            </TouchableOpacity>
+            </Pressable>
           </View>
   
           {/* Buttons Section */}
           <View className='mt-4 flex-row flex-wrap justify-between'>
             {[
-              { title: 'Notifications', icon: 'notification_icon_url' },
+              { title: 'Notifications', icon: 'notification_icon_url',onPress:()=>router.push('../(comp)/noti') },
               { title: 'Support       ', icon: 'support_icon_url' },
-              { title: 'School      ', icon: 'school_icon_url' },
-              { title: 'College        ', icon: 'college_icon_url' },
-              { title: 'Scholarship', icon: 'scholarship_icon_url' },
-              { title: 'Map           ', icon: 'map_icon_url' },
+              { title: 'School      ', icon: 'school_icon_url',onPress:()=>router.push('../(comp)/schools') },
+              { title: 'College        ', icon: 'college_icon_url',onPress:()=>router.push('../(comp)/college') },
+              { title: 'Scholarship', icon: 'scholarship_icon_url',onPress:()=>router.push('../(comp)') },
+              { title: 'Map           ', icon: 'map_icon_url',onPress:()=>router.push('../(comp)/maps')  },
             ].map((item, index) => (
               <TouchableOpacity
                 key={index}
                 className='w-1/2 p-2'
+                onPress={item.onPress}
               >
                 <View
                   className='bg-blue-600 rounded-lg p-4 flex-row items-center justify-between mt-4'
