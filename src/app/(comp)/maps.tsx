@@ -10,17 +10,18 @@ const MapPage = () => {
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: 37.78825, // Replace with your desired latitude
-          longitude: -122.4324, // Replace with your desired longitude
+          latitude: 8.3823, // Replace with your desired latitude
+          longitude: 76.9792, // Replace with your desired longitude
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
       >
         <Marker
-          coordinate={{ latitude: 37.78825, longitude: -122.4324 }}
+          coordinate={{ latitude: 8.3823, longitude: 76.9792 }}
           title="Marker Title"
           description="Marker Description"
         />
+        
       </MapView>
     </View>
   );

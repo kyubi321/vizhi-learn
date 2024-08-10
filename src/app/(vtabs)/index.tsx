@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet, Pressable } from 'react-native';
 import Button3 from '../../components/Button2';
 import { useRouter } from 'expo-router';
+import { FontAwesome6 } from '@expo/vector-icons';
 
 
 export default function Home(){
@@ -9,6 +10,7 @@ export default function Home(){
     return(
         <ScrollView className='bg-white p-2' >
         <View className='p-4'>
+          
           {/* Profile Section */}
           <View className='flex-row items-center justify-between  bg-slate-300 rounded-xl p-2'>
             <View>
